@@ -1,0 +1,34 @@
+@import "../styles-variables";
+
+.margintop-toggler-sm{
+    margin-top: 265px ;
+}
+
+.margintop-toggler-md{
+    margin-top: 227px ;
+}
+
+@media all {
+    .myClass ul{
+        list-style: none;
+        padding-left: 0;
+    }
+    .myClass{
+        background-color:#FFF;
+    }
+    .mybadgeClass{
+        color:#FFF;
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .margintop-lg{
+        margin-top: 67px;
+      }
+}
+
+@media (max-width: map-get($grid-breakpoints, lg)){
+    .margintop-sm{
+        margin-top: 61px;
+      }
+}

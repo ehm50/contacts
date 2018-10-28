@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li class="list-group-item">Firstname:
+          <span>{{contact.firstname}}</span>
+        </li>
+        <li class="list-group-item"> Surname:
+          <span>{{contact.surname}}</span>
+        </li>
+        <li class="list-group-item">Email:
+          <span>{{contact.email}}</span>
+        </li>
+        <li class="list-group-item" *ngIf="!contact.company.phone == '' ">Phone:
+          <span>{{contact.phone}}</span>
+        </li>
+      </ul>
+      <ul class="list-group" *ngFor="let address of contact.addresses; let i = index">
+        <li class="list-group-item">Address(es):
+          <span *ngIf="showContactNumber">{{i+1}}</span>
+        </li>
+        <li class="list-group-item">Street:
+          <span> {{address.street}}</span>
+        </li>
+        <li class="list-group-item">Postcode:
+          <span>{{address.postcode}}</span>
+        </li>
+        <li class="list-group-item">City:
+          <span>{{address.city}}</span>
+        </li>
+        <li class="list-group-item">Country:
+          <span> {{address.country}}</span>
+        </li>
+      </ul>
+      <ul class="list-group">
+        <li class="list-group-item" *ngIf="!contact.company.name == '' ">Company Name:
+          <span>{{contact.company.name}}</span>
+        </li>
+        <li class="list-group-item" *ngIf="!contact.company.website == '' ">Web Address:
+          <span>{{contact.company.website}}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+   <div id="myClass">
+      <ul >
+        <li>
+          <button type="button" class="btn btn-outline-success btn-block m-1 mx-auto" [routerLink]="['']">
+            <i class="fa fa-arrow-left"></i>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="btn btn-outline-success btn-block m-1 mx-auto" [routerLink]="['/entry']">
+            <i class="fa fa-edit"></i>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="btn btn-outline-success btn-block m-1 mx-auto" (click)="openDialog()">
+            <i class="fa fa-user-minus"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+</div>

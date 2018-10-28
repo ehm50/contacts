@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Surname</th>
+            <th>More Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of contacts; let i = index">
+            <td>{{item.firstname}}</td>
+            <td>{{item.surname}}</td>
+            <td>
+              <a class="btn" role="button" (click)="newMessage(item)">
+                <i class="fa fa-info"></i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!--| filter : searchkey | orderBy:'firstname'-->
+    </div>
+  </div>
+</div>

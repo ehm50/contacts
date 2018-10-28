@@ -1,0 +1,194 @@
+{
+  "contacts": [
+    {
+      "addresses": [
+        {
+          "street": "1388 Stöckli Prairie",
+          "postcode": "HK",
+          "city": "East Astrid",
+          "country": "Ukraine"
+        }
+      ],
+      "company": {
+        "name": "Rey Gruppe",
+        "website": "https://giuseppe.ch"
+      },
+      "firstname": "Joseph",
+      "surname": "Kern",
+      "email": "Franoise_Merz@hotmail.com",
+      "phone": "0800 814 987",
+      "id": 0
+    },
+    {
+      "addresses": [
+        {
+          "street": "6402 Schär Brooks",
+          "postcode": "CH",
+          "city": "West Carmen",
+          "country": "Seychelles"
+        }
+      ],
+      "company": {
+        "name": "Koch Gruppe",
+        "website": "https://christoph.biz"
+      },
+      "firstname": "Johanna",
+      "surname": "Martin",
+      "email": "Alexandre.Lscher93@yahoo.com",
+      "phone": "0800 646 992",
+      "id": 1
+    },
+    {
+      "addresses": [
+        {
+          "street": "7255 Seiler Forge",
+          "postcode": "US",
+          "city": "Thereseville",
+          "country": "Guatemala"
+        }
+      ],
+      "company": {
+        "name": "Baur - Schumacher",
+        "website": "http://jean-claude.de"
+      },
+      "firstname": "Ingrid",
+      "surname": "Iten",
+      "email": "Jan.Lanz@hotmail.com",
+      "phone": "0800 698 812",
+      "id": 2
+    },
+    {
+      "addresses": [
+        {
+          "street": "12328 Blaser Harbor",
+          "postcode": "US",
+          "city": "Schenkview",
+          "country": "Aruba"
+        }
+      ],
+      "company": {
+        "name": "Bättig, Stucki and Wyss",
+        "website": "http://arnold.biz"
+      },
+      "firstname": "André",
+      "surname": "Hauser",
+      "email": "Sylvia53@yahoo.com",
+      "phone": "0800 477 213",
+      "id": 3
+    },
+    {
+      "addresses": [
+        {
+          "street": "098 Maurice Highway",
+          "postcode": "CH",
+          "city": "South Silvioport",
+          "country": "Bangladesh"
+        }
+      ],
+      "company": {
+        "name": "Schwab - Thommen",
+        "website": "http://leo.com"
+      },
+      "firstname": "Ernst",
+      "surname": "Thommen",
+      "email": "Roger20@gmail.com",
+      "phone": "0800 789 486",
+      "id": 4
+    },
+    {
+      "addresses": [
+        {
+          "street": "6001 Schnyder Road",
+          "postcode": "US",
+          "city": "North Erwinfurt",
+          "country": "Lebanon"
+        }
+      ],
+      "company": {
+        "name": "Imhof, Senn and Schwab",
+        "website": "http://arthur.li"
+      },
+      "firstname": "Eveline",
+      "surname": "Sutter",
+      "email": "Yvonne.Bhler76@yahoo.com",
+      "phone": "0800 801 274",
+      "id": 5
+    },
+    {
+      "addresses": [
+        {
+          "street": "6691 Hansueli Circles",
+          "postcode": "US",
+          "city": "Schnyderfort",
+          "country": "Macedonia"
+        }
+      ],
+      "company": {
+        "name": "Hasler - Zbinden",
+        "website": "http://rainer.li"
+      },
+      "firstname": "Ernst",
+      "surname": "Zehnder",
+      "email": "Simone44@gmail.com",
+      "phone": "0800 582 876",
+      "id": 6
+    },
+    {
+      "addresses": [
+        {
+          "street": "9503 Marianne Park",
+          "postcode": "HK",
+          "city": "Port Gérardfort",
+          "country": "Kuwait"
+        }
+      ],
+      "company": {
+        "name": "Gloor Gruppe",
+        "website": "https://walter.net"
+      },
+      "firstname": "Josette",
+      "surname": "Thommen",
+      "email": "Rosemarie91@yahoo.com",
+      "phone": "0800 798 062",
+      "id": 7
+    },
+    {
+      "addresses": [
+        {
+          "street": "602 Steiger Cliffs",
+          "postcode": "AT",
+          "city": "Widmerburgh",
+          "country": "Slovenia"
+        }
+      ],
+      "company": {
+        "name": "Probst - Favre",
+        "website": "https://eric.net"
+      },
+      "firstname": "Nathalie",
+      "surname": "Wenger",
+      "email": "Therese_Mller35@yahoo.com",
+      "phone": "0800 562 993",
+      "id": 8
+    },
+    {
+      "addresses": [
+        {
+          "street": "42404 Francesco Fall",
+          "postcode": "CH",
+          "city": "Burriville",
+          "country": "Martinique"
+        }
+      ],
+      "company": {
+        "name": "Winkler, Weber and Meili",
+        "website": "http://véronique.com"
+      },
+      "firstname": "Suzanne",
+      "surname": "Zbinden",
+      "email": "Jean-Claude.Burri@hotmail.com",
+      "phone": "0800 379 053",
+      "id": 9
+    }
+  ]
+}

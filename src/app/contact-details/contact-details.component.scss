@@ -1,0 +1,19 @@
+@import "../../styles-variables";
+
+@media all {
+    #myClass ul{
+        list-style: none;
+        padding-left: 0;
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    #myClass ul{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #myClass li{
+        margin: 5px;
+     }
+}
+

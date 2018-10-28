@@ -1,0 +1,110 @@
+<form novalidate [formGroup]="contactForm" (ngSubmit)="savecontact(contactForm.value)">
+  <div class="form-group row">
+    <label for="firstname" class="col-sm-2 col-form-label">Firstname</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="firstname" placeholder="Firstname" formControlName="firstname" required>
+      <ch-show-validation-error displayName="Firstname" path="firstname"></ch-show-validation-error>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="surname" class="col-sm-2 col-form-label">Surname</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="surname" placeholder="Surname" formControlName="surname" required>
+      <ch-show-validation-error displayName="Surname" path="surname"></ch-show-validation-error>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="email" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email" required>
+      <ch-show-validation-error displayName="Email" path="email"></ch-show-validation-error>
+      <!-- todo <input type="email"> html 5 -->
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="phone" placeholder="Phone" formControlName="phone" required>
+    </div>
+  </div>
+  <legend>2. Addresses</legend>
+  <div formArrayName="addresses">
+    <div *ngFor="let address of addressesArray.controls; let i = index">
+      <div [formGroupName]="i">
+        <h4 *ngIf="showAddressNumber">Address: {{i+1}}</h4>
+        <div class="form-group row">
+          <label for="street" class="col-sm-2 col-form-label">Street</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="street" placeholder="Street" formControlName="street" required>
+            <ch-show-validation-error displayName="Street" path="addresses.{{i}}.street"></ch-show-validation-error>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="postcode" class="col-sm-2 col-form-label">Postcode</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="postcode" placeholder="Postcode" formControlName="postcode" required>
+            <ch-show-validation-error displayName="Postcode" path="addresses.{{i}}.postcode"></ch-show-validation-error>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="city" class="col-sm-2 col-form-label">City</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="city" placeholder="City" formControlName="city" required>
+            <ch-show-validation-error displayName="City" path="addresses.{{i}}.city"></ch-show-validation-error>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="country" class="col-sm-2 col-form-label">Country</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="country" placeholder="Country" formControlName="country" required>
+            <ch-show-validation-error displayName="Country" path="addresses.{{i}}.country"></ch-show-validation-error>
+          </div>
+        </div>
+        <div class="myClass">
+          <ul>
+            <li>
+              <button type="button" class="btn btn-outline-success btn-block m-1 mx-auto" (click)="addAddress()">Add Address</button>
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-success btn-block m-1 mx-auto" (click)="removeAddress(i)">Remove Address
+                <span *ngIf="showAddressNumber">{{i+1}}</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <legend>3. Company</legend>
+  <div formGroupName="company">
+    <div class="form-group row">
+      <label for="name" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="name" placeholder="Name" formControlName="name" required>
+        <!--      <ch-show-validation-error path="company.name"></ch-show-validation-error>-->
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="website" class="col-sm-2 col-form-label">Website</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="website" placeholder="Website" formControlName="website" required>
+        <!--      <ch-show-validation-error path="company.website"></ch-show-validation-error>-->
+      </div>
+    </div>
+  </div>
+  <div class="myClass">
+    <ul>
+      <li>
+        <button type="button" class="btn btn-outline-success btn-block m-1 mx-auto" [routerLink]="['/list']">
+          <i class="fa fa-arrow-left"></i>
+        </button>
+      </li>
+      <li>
+        <button type="submit" class="btn btn-outline-success btn-block m-1 mx-auto">
+          <i class="fa fa-save"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+</form>
+<!--todo type="button"type="submit"  bootstrap wie ist type vom submitbutton //[disabled]="!contactForm.valid"-->
