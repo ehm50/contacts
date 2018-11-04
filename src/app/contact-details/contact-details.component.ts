@@ -5,7 +5,7 @@ import { ContactStore, REMOVE } from '../store/contact-store';
 import { DataService } from '../services/data.service';
 import { Contact } from '../models/model-interfaces';
 import { Subscription } from 'rxjs';
-//import { DeleteConfirmDialogComponent } from '../delete-confirm-dialog/delete-confirm-dialog.component';
+
 
 @Component({
   selector: 'ch-contact-details',
@@ -22,7 +22,7 @@ export class ContactDetailsComponent implements OnInit {
     private data: DataService) { }
 
   ngOnInit() {
-   this.dataServiceSubscription = this.data.currentMessage.subscribe(message => { this.loadaddress(message); }); 
+    this.dataServiceSubscription = this.data.currentMessage.subscribe(message => { this.loadaddress(message); });
   }
 
   ngOnDestroy(): void {
@@ -48,24 +48,5 @@ export class ContactDetailsComponent implements OnInit {
       this.router.navigate([relativeUrl], { relativeTo: this.route });
     });
   }
-/*
-  openDialog(): void {
-    let dialogRef = this.dialog.open(DeleteConfirmDialogComponent, {
-      width: '600px',
-      data: {
-        firstname: this.contact.firstname,
-        surname: this.contact.surname,
-        email: this.contact.email,
-        phone: this.contact.phone
-      }
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      this.deleteConfirmation = result;
-      if (this.deleteConfirmation == "yes") {
-        this.deleteContact(this.contact.id);
-      }
-    });
-  }*/
 
 }

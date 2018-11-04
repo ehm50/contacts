@@ -1,3 +1,37 @@
+<!-- Modal -->
+<div class="modal fade" id="ConfirmDeletionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Confirm Deletion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p><span> <i class="fa fa-question-circle"></i> Are you sure you want to permanently remove this contact</span></p>
+        <ul class="list-group">
+          <li class="list-group-item">Firstname:
+            <span>{{contact.firstname}}</span>
+          </li>
+          <li class="list-group-item"> Surname:
+            <span>{{contact.surname}}</span>
+          </li>
+          <li class="list-group-item">Email:
+            <span>{{contact.email}}</span>
+          </li>
+          <li class="list-group-item" *ngIf="!contact.company.phone == '' ">Phone:
+            <span>{{contact.phone}}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" data-dismiss="modal">No</button>
+        <button type="button" class="btn bbtn-outline" (click)="deleteContact(contact.id)" data-dismiss="modal">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
@@ -55,7 +89,7 @@
           </button>
         </li>
         <li>
-          <button type="button" class="btn btn-outline-success btn-block m-1 mx-auto" (click)="openDialog()">
+          <button type="button" class="btn btn-outline-success btn-block m-1 mx-auto" data-toggle="modal" data-target="#ConfirmDeletionModal">
             <i class="fa fa-user-minus"></i>
           </button>
         </li>
