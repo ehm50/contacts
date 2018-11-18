@@ -2,29 +2,37 @@
   <div class="form-group row">
     <label for="firstname" class="col-sm-2 col-form-label">Firstname</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="firstname" placeholder="Firstname" formControlName="firstname" required>
-      <ch-show-validation-error displayName="Firstname" path="firstname"></ch-show-validation-error>
+      <input type="text" class="form-control" id="firstname" placeholder="Firstname" formControlName="firstname" [ngClass]="{ 'is-invalid': contactForm.get('firstname').invalid && (contactForm.get('firstname').dirty || contactForm.get('firstname').touched),
+      'is-valid': contactForm.get('firstname').valid && (contactForm.get('firstname').dirty || contactForm.get('firstname').touched) }">
+      <div class="invalid-feedback">
+        <ch-show-validation-error displayName="Firstname" path="firstname"></ch-show-validation-error>
+      </div>
     </div>
   </div>
   <div class="form-group row">
     <label for="surname" class="col-sm-2 col-form-label">Surname</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="surname" placeholder="Surname" formControlName="surname" required>
-      <ch-show-validation-error displayName="Surname" path="surname"></ch-show-validation-error>
+      <input type="text" class="form-control" id="surname" placeholder="Surname" formControlName="surname" [ngClass]="{ 'is-invalid': contactForm.get('surname').invalid && (contactForm.get('surname').dirty || contactForm.get('surname').touched),
+      'is-valid': contactForm.get('surname').valid && (contactForm.get('surname').dirty || contactForm.get('surname').touched) }">
+      <div class="invalid-feedback">
+        <ch-show-validation-error displayName="Surname" path="surname"></ch-show-validation-error>
+      </div>
     </div>
   </div>
   <div class="form-group row">
     <label for="email" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email" required>
-      <ch-show-validation-error displayName="Email" path="email"></ch-show-validation-error>
-      <!-- todo <input type="email"> html 5 -->
+      <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email" [ngClass]="{ 'is-invalid': contactForm.get('email').invalid && (contactForm.get('email').dirty || contactForm.get('email').touched),
+      'is-valid': contactForm.get('email').valid && (contactForm.get('email').dirty || contactForm.get('email').touched) }">
+      <div class="invalid-feedback">
+        <ch-show-validation-error displayName="Email" path="email"></ch-show-validation-error>
+      </div>
     </div>
   </div>
   <div class="form-group row">
     <label for="phone" class="col-sm-2 col-form-label">Phone</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="phone" placeholder="Phone" formControlName="phone" required>
+      <input type="text" class="form-control" id="phone" placeholder="Phone" formControlName="phone">
     </div>
   </div>
   <legend>2. Addresses</legend>
@@ -35,32 +43,44 @@
         <div class="form-group row">
           <label for="street" class="col-sm-2 col-form-label">Street</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="street" placeholder="Street" formControlName="street" required>
-            <ch-show-validation-error displayName="Street" path="addresses.{{i}}.street"></ch-show-validation-error>
+            <input type="text" class="form-control" id="street" placeholder="Street" formControlName="street" [ngClass]="{ 'is-invalid': contactForm.get('addresses.'+i+'.street').invalid && (contactForm.get('addresses.'+i+'.street').dirty ||contactForm.get('addresses.'+i+'.street').touched),
+            'is-valid': contactForm.get('addresses.'+i+'.street').valid && (contactForm.get('addresses.'+i+'.street').dirty || contactForm.get('addresses.'+i+'.street').touched) }">
+            <div class="invalid-feedback">
+              <ch-show-validation-error displayName="Street" path="addresses.{{i}}.street"></ch-show-validation-error>
+            </div>
           </div>
         </div>
         <div class="form-group row">
           <label for="postcode" class="col-sm-2 col-form-label">Postcode</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="postcode" placeholder="Postcode" formControlName="postcode" required>
-            <ch-show-validation-error displayName="Postcode" path="addresses.{{i}}.postcode"></ch-show-validation-error>
+            <input type="text" class="form-control" id="postcode" placeholder="Postcode" formControlName="postcode" [ngClass]="{ 'is-invalid': contactForm.get('addresses.'+i+'.postcode').invalid && (contactForm.get('addresses.'+i+'.postcode').dirty ||contactForm.get('addresses.'+i+'.postcode').touched),
+            'is-valid': contactForm.get('addresses.'+i+'.postcode').valid && (contactForm.get('addresses.'+i+'.postcode').dirty || contactForm.get('addresses.'+i+'.postcode').touched) }">
+            <div class="invalid-feedback">
+              <ch-show-validation-error displayName="Postcode" path="addresses.{{i}}.postcode"></ch-show-validation-error>
+            </div>
           </div>
         </div>
         <div class="form-group row">
           <label for="city" class="col-sm-2 col-form-label">City</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="city" placeholder="City" formControlName="city" required>
-            <ch-show-validation-error displayName="City" path="addresses.{{i}}.city"></ch-show-validation-error>
+            <input type="text" class="form-control" id="city" placeholder="City" formControlName="city" [ngClass]="{ 'is-invalid': contactForm.get('addresses.'+i+'.city').invalid && (contactForm.get('addresses.'+i+'.city').dirty ||contactForm.get('addresses.'+i+'.city').touched),
+            'is-valid': contactForm.get('addresses.'+i+'.city').valid && (contactForm.get('addresses.'+i+'.city').dirty || contactForm.get('addresses.'+i+'.city').touched) }">
+            <div class="invalid-feedback">
+              <ch-show-validation-error displayName="City" path="addresses.{{i}}.city"></ch-show-validation-error>
+            </div>
           </div>
         </div>
         <div class="form-group row">
           <label for="country" class="col-sm-2 col-form-label">Country</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="country" placeholder="Country" formControlName="country" required>
-            <ch-show-validation-error displayName="Country" path="addresses.{{i}}.country"></ch-show-validation-error>
+            <input type="text" class="form-control" id="country" placeholder="Country" formControlName="country" [ngClass]="{ 'is-invalid': contactForm.get('addresses.'+i+'.country').invalid && (contactForm.get('addresses.'+i+'.country').dirty ||contactForm.get('addresses.'+i+'.country').touched),
+            'is-valid': contactForm.get('addresses.'+i+'.country').valid && (contactForm.get('addresses.'+i+'.country').dirty || contactForm.get('addresses.'+i+'.country').touched) }">
+            <div class="invalid-feedback">
+              <ch-show-validation-error displayName="Country" path="addresses.{{i}}.country"></ch-show-validation-error>
+            </div>
           </div>
         </div>
-        <div class="myClass">
+        <div class=" form-group myClass">
           <ul>
             <li>
               <button type="button" class="btn btn-outline-success btn-block m-1 mx-auto" (click)="addAddress()">Add Address</button>
@@ -80,19 +100,20 @@
     <div class="form-group row">
       <label for="name" class="col-sm-2 col-form-label">Name</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="name" placeholder="Name" formControlName="name" required>
-             <ch-show-validation-error displayName="Company Name" path="company.name"></ch-show-validation-error>
+        <input type="text" class="form-control" id="name" placeholder="Name" formControlName="name">
       </div>
     </div>
     <div class="form-group row">
       <label for="website" class="col-sm-2 col-form-label">Website</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="website" placeholder="Website" formControlName="website" required>
-        <ch-show-validation-error displayName="Website" path="company.website"></ch-show-validation-error>
+        <input type="text" class="form-control" id="website" placeholder="Website" formControlName="website" [ngClass]="{'is-invalid': contactForm.get('company.website').invalid}">
+        <div class="invalid-feedback">
+          <ch-show-validation-error displayName="Website" path="company.website"></ch-show-validation-error>
+        </div>
       </div>
     </div>
   </div>
-  <div class="myClass">
+  <div class="form-group myClass">
     <ul>
       <li>
         <button type="button" class="btn btn-outline-success btn-block m-1 mx-auto" [routerLink]="['/list']">
@@ -100,11 +121,10 @@
         </button>
       </li>
       <li>
-        <button type="submit" class="btn btn-outline-success btn-block m-1 mx-auto">
+        <button type="submit" class="btn btn-outline-success btn-block m-1 mx-auto" [disabled]="!contactForm.valid">
           <i class="fa fa-save"></i>
         </button>
       </li>
     </ul>
   </div>
 </form>
-<!--todo type="button"type="submit"  bootstrap wie ist type vom submitbutton //[disabled]="!contactForm.valid"-->

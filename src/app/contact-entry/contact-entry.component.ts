@@ -128,9 +128,5 @@ export class ContactEntryComponent implements OnInit {
     this.router.navigate([url]);
   }
 
-  message() {
-    alert("I am an alert box!");
-  }
-
 }
 
