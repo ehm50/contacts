@@ -9,9 +9,9 @@ import { Contact } from './models/model-interfaces';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
-  @ViewChild('togglerButton') togglerButton: ElementRef<HTMLButtonElement>;
-  @ViewChild('mydiv') mydiv: ElementRef<HTMLDivElement>;
-  @ViewChild('mynav') mynav: ElementRef<HTMLDivElement>;
+  @ViewChild('togglerButton',{ read: true, static: false }) togglerButton: ElementRef<HTMLButtonElement>;
+  @ViewChild('mydiv',{ read: true, static: false }) mydiv: ElementRef<HTMLDivElement>;
+  @ViewChild('mynav',{ read: true, static: false }) mynav: ElementRef<HTMLDivElement>;
   contactCounter: number;
   flag: boolean = false;
 
